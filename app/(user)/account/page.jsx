@@ -43,7 +43,7 @@ export default function Page() {
             0
           );
           return (
-            <div className="flex flex-col gap-2 border rounded-lg p-4">
+            <div key={item.id || orderIndex} className="flex flex-col gap-2 border rounded-lg p-4">
               <div className="flex flex-col gap-2">
                 <div className="flex gap-3">
                   <h3>{orderIndex + 1}</h3>
