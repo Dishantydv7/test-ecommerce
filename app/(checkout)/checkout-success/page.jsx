@@ -7,7 +7,7 @@ import SuccessMessage from "./components/SuccessMessage";
 const fetchCheckout = async (checkoutId) => {
   const list = await adminDB
     .collectionGroup("checkout_sessions")
-    // .where("id", "==", checkoutId)
+    .where("id", "==", checkoutId)
     .get();
   if (list.docs.length === 0) {
     throw new Error("Invalid Checkout ID");
